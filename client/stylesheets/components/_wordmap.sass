@@ -1,0 +1,30 @@
+.wordmap-component.bubble-chart-container
+  position: relative
+  +display(flex)
+  +flex(1)
+  +justify-content(center)
+  +user-select(none)
+
+  .bubble-chart-text
+    .bubble-label
+      +display(flex)
+      +align-items(center)
+      +justify-content(space-around)
+      text-align: center
+      overflow: hidden
+      border-radius: 50%
+      cursor: pointer
+      will-change: left, top, height, width
+
+      &:hover
+        overflow: visible
+        font-weight: bold
+
+      &.medium
+        font-size: 0.8em
+      &.small
+        font-size: 0
+        &:hover
+          font-size: 0.8em
+
+  svg.bubble-chart-d3
