@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
     grid: state.media.grid,
     filter: state.media.filter,
     data: state.media.data,
+    dictionary: state.media.dictionary,
     displayGallery: state.view.displayGallery
   }
 }
