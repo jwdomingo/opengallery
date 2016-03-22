@@ -42,7 +42,7 @@ export default class Gallery extends React.Component {
   }
 
   render () {
-    const { tile, grid, data, dictionary, hideGallery } = this.props
+    const { tile, grid, data, dictionary, displayWordmap, hideGallery } = this.props
     const tileWidth = data[grid[tile]].width
     const tileHeight = data[grid[tile]].height
     const tilePhoto = data[grid[tile]].url_lg || data[grid[tile]].url_md
@@ -84,6 +84,7 @@ export default class Gallery extends React.Component {
                         tile={tile}
                         data={data[grid[i]]}
                         dictionary={dictionary}
+                        displayWordmap={displayWordmap}
                       />
                     </Tile>
                   }
