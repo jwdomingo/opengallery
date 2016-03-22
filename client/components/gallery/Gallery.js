@@ -57,7 +57,7 @@ export default class Gallery extends React.Component {
       gallery.push({
         left: spring(left, config),
         height: spring(tileHeight, config),
-        width: spring(widths[i], config),
+        width: spring(widths[i], config)
       })
       return left + widths[i]
     }, start)
