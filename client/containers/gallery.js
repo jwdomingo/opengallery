@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     filter: state.media.filter,
     data: state.media.data,
     dictionary: state.media.dictionary,
-    displayGallery: state.view.displayGallery
+    displayGallery: state.view.displayGallery,
+    displayWordmap: state.view.displayWordmap
   }
 }
 
