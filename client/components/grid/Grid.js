@@ -4,7 +4,7 @@ import GridTile from './GridTile'
 
 import GridList from 'material-ui/lib/grid-list/grid-list'
 
-const Grid = ({ tile, grid, filter, data, loadGrid, toggleGallery }) => {
+const Grid = ({ tile, grid, data, loadGrid, toggleGallery }) => {
 
   return (
     <div id="grid-component">
