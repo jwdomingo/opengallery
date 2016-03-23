@@ -1,6 +1,6 @@
 import { initialState } from '../../test/initialState'
 import { TOGGLE_GALLERY } from '../actions/gallery'
-import { TOGGLE_WORDMAP } from '../actions/wordmap.actions'
+import { SHOW_WORDMAP, HIDE_WORDMAP } from '../actions/wordmap.actions'
 
 const view = (state = initialState.view, action) => {
   switch (action.type) {
@@ -8,9 +8,13 @@ const view = (state = initialState.view, action) => {
       return Object.assign({}, state, {
         displayGallery: !state.displayGallery
       })
-    case TOGGLE_WORDMAP:
+    case SHOW_WORDMAP:
       return Object.assign({}, state, {
-        displayWordmap: !state.displayWordmap
+        displayWordmap: true
+      })
+    case HIDE_WORDMAP:
+      return Object.assign({}, state, {
+        displayWordmap: false
       })
     default:
       return state
