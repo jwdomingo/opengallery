@@ -24,13 +24,19 @@ export default class Gallery extends React.Component {
   navigateGallery = ({ keyCode }) => {
     // Add debounce function
     if (keyCode === 27 || keyCode > 36 && keyCode < 41) {
-      const { nextTile, prevTile, hideGallery } = this.props
+      const { nextTile, prevTile, hideGallery, showWordmap, hideWordmap } = this.props
       switch (keyCode) {
         case 37: // left arrow
           prevTile()
           break
+        case 38: // up arrow
+          showWordmap()
+          break
         case 39: // right arrow
           nextTile()
+          break
+        case 40: // down arrow
+          hideWordmap()
           break
         case 27: // esc key
           hideGallery(0)
@@ -65,14 +71,14 @@ export default class Gallery extends React.Component {
     return (
       <div id="gallery-component" onClick={() => hideGallery(tile)}>
         <Motion style={{height: spring(tileHeight), width: spring(tileWidth)}}>
-          {container =>
+          { container =>
             <div className="gallery-tile" style={container}>
-              {gallery.map((style, i) =>
+              { gallery.map((style, i) =>
                 <Motion
                   key={data[grid[i]].mediaId}
                   style={style}
                 >
-                  {style =>
+                  { style =>
                     <Tile
                       style={style}
                       url={data[grid[i]].url_lg}
@@ -80,12 +86,12 @@ export default class Gallery extends React.Component {
                       handleClick={() => hideGallery(tile)}
                     >
                       <GalleryTile data={data[grid[i]]}/>
-                      <Wordmap
+                      { displayWordmap ? <Wordmap
                         tile={tile}
                         data={data[grid[i]]}
                         dictionary={dictionary}
                         displayWordmap={displayWordmap}
-                      />
+                      /> : '' }
                     </Tile>
                   }
                 </Motion>
