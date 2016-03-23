@@ -70,3 +70,8 @@
   & + #nav-component + #grid-component,
   & + #nav-component + #user-component
     +filter(blur(6px))
+
+  & + #nav-component + #user-component,
+  & + #nav-component + #grid-component
+    max-height: calc(100vh - 70px)
+    overflow: hidden
