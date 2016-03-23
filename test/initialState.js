@@ -73,7 +73,7 @@ export const initialState = {
         width: 800,
         height: 600,
         showHiRes: false,
-        feedback: [[1, 10], [2, 20], [3, 30], [4, 40], [5, 50]]
+        feedback: [[1, 70], [2, 120], [3, 30], [4, 80], [5, 550], [6, 70], [7, 120], [8, 30], [9, 80], [5, 550]]
       },
       '2': {
         mediaId: 2,
