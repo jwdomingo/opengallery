@@ -1,7 +1,14 @@
-export const TOGGLE_WORDMAP = 'TOGGLE_WORDMAP'
+export const SHOW_WORDMAP = 'SHOW_WORDMAP'
+export const HIDE_WORDMAP = 'HIDE_WORDMAP'
 
-export function toggleView() {
+export function show() {
   return {
-    type: TOGGLE_WORDMAP
+    type: SHOW_WORDMAP
+  }
+}
+
+export function hide() {
+  return {
+    type: HIDE_WORDMAP
   }
 }
