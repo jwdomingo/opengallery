@@ -25,22 +25,23 @@ export default class Wordmap extends React.Component {
     }))
 
     return (
-      <ReactBubbleChart
-        className="wordmap-component"
-        data={sentiment}
-        selectedColor="white"
-        selectedTextColor="rgba(0, 0, 0, 0.75)"
-        fixedDomain={{ min: -1, max: 1 }}
-        onClick={{}}
-        legend={false}
-        legendSpacing={0}
-        tooltip={false}
-        tooltipProps={tooltipProps}
-        tooltipFunc={() => {}}
-        fontSizeFactor={0.5}
-        duration={0}
-        delay={0}
-      />
+      <div className="wordmap-component">
+        <ReactBubbleChart
+          data={sentiment}
+          selectedColor="white"
+          selectedTextColor="rgba(0, 0, 0, 0.75)"
+          fixedDomain={{ min: -1, max: 1 }}
+          onClick={() => {}}
+          legend={false}
+          legendSpacing={0}
+          tooltip={false}
+          tooltipProps={tooltipProps}
+          tooltipFunc={() => {}}
+          fontSizeFactor={0.5}
+          duration={0}
+          delay={0}
+        />
+      </div>
     )
   }
 }
